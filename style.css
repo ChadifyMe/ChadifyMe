@@ -1,16 +1,120 @@
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  margin: 10px;
-  background-color: #2ecc71;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
 }
 
-.btn:hover {
-  background-color: #27ae60;
+.hero {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.cta {
+  background: #ff5c5c;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.carousel img {
+  height: 200px;
+  border-radius: 10px;
+}
+
+.products {
+  padding: 2rem 1rem;
+  background: #fff;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.book {
+  background: #f1f1f1;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.book img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.price {
+  font-weight: bold;
+  color: #555;
+}
+
+.discount {
+  color: #ff5c5c;
+  margin-left: 10px;
+}
+
+.buy-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: #0070f3;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.combo {
+  text-align: center;
+  background: #ffe0e0;
+  padding: 2rem 1rem;
+}
+
+.combo-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #ff5c5c;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.reviews {
+  padding: 2rem 1rem;
+  background: #fafafa;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: #ccc;
+  font-size: 0.9rem;
 }
