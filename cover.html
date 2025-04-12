@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buy ChadifyMe eBooks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      padding: 20px;
+    }
+
+    .book-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .book-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .book-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .book-title {
+      font-weight: bold;
+      margin: 12px 0 6px;
+    }
+
+    .price {
+      color: green;
+      margin-bottom: 12px;
+    }
+
+    .upi-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .confirm-button {
+      display: none;
+      margin-top: 10px;
+      background-color: #007bff;
+    }
+
+    .download-link {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>ChadifyMe Premium Methods</h2>
+  <div class="book-grid">
+
+    <!-- Book 1 -->
+    <div class="book-card">
+      <img src="the-6ft-6-cover.jpg" alt="6ft F Method">
+      <div class="book-title">The 6ft F Method</div>
+      <div class="price">₹149</div>
+      <button class="upi-button" onclick="pay('149', '6ft-f-method.pdf')">Buy Now</button>
+    </div>
+
+    <!-- Book 2 -->
+    <div class="book-card">
+      <img src="bamboo-cover.jpg" alt="Bamboo Method">
+      <div class="book-title">The Bamboo Method</div>
+      <div class="price">₹149</div>
+      <button class="upi-button" onclick="pay('149', 'bamboo-method.pdf')">Buy Now</button>
+    </div>
+
+    <!-- Book 3 -->
+    <div class="book-card">
+      <img src="gumbi-cover.jpg" alt="Gumbi Method">
+      <div class="book-title">The Gumbi Method</div>
+      <div class="price">₹149</div>
+      <button class="upi-button" onclick="pay('149', 'gumbi-method.pdf')">Buy Now</button>
+    </div>
+
+    <!-- Book 4 -->
+    <div class="book-card">
+      <img src="titan-cover.jpg" alt="Titan Method">
+      <div class="book-title">The Titan Method</div>
+      <div class="price">₹149</div>
+      <button class="upi-button" onclick="pay('149', 'titan-method.pdf')">Buy Now</button>
+    </div>
+
+    <!-- Combo -->
+    <div class="book-card">
+      <img src="combo-cover.jpg" alt="Combo Deal">
+      <div class="book-title">All Methods Combo</div>
+      <div class="price">₹499</div>
+      <button class="upi-button" onclick="pay('499', 'combo.zip')">Buy Now</button>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <button id="confirmBtn" class="upi-button confirm-button" onclick="revealDownload()">I have paid</button>
+    <div id="download" class="download-link">
+      <a id="downloadLink" href="#" download>Click here to download your file</a>
+    </div>
+  </div>
+
+  <script>
+    let selectedFile = "";
+
+    function pay(amount, file) {
+      selectedFile = file;
+      const upiId = "9709131344@axl";
+      const name = "ChadifyMe Books";
+      const url = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR`;
+      window.location.href = url;
+
+      setTimeout(() => {
+        document.getElementById("confirmBtn").style.display = "inline-block";
+      }, 2000);
+    }
+
+    function revealDownload() {
+      document.getElementById("downloadLink").href = selectedFile;
+      document.getElementById("download").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
