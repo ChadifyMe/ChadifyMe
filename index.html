@@ -1,53 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ChadifyMe | Height & LooksMaxxing eBooks</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>ChadifyMe eBooks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      padding: 20px;
+    }.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.book-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.book-title {
+  font-weight: bold;
+  margin: 12px 0 6px;
+}
+
+.price {
+  color: green;
+  margin-bottom: 12px;
+}
+
+.upi-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.confirm-button {
+  display: none;
+  margin-top: 10px;
+  background-color: #007bff;
+}
+
+.download-link {
+  display: none;
+  margin-top: 10px;
+}
+
+  </style>
 </head>
-<body>
-  <header class="hero">
-    <h1>ChadifyMe</h1>
-    <p>Unlock Your Best Self. Scientifically-Proven Height & LooksMaxxing Guides.</p>
-    <a href="#ebooks" class="cta">Browse eBooks</a>
-  </header>
+<body>  <h2>ChadifyMe Premium Methods</h2>
+  <div class="book-grid"><div class="book-card">
+  <img src="the-6ft-6-cover.jpg" alt="6ft F Method">
+  <div class="book-title">The 6ft F Method</div>
+  <div class="price">₹149</div>
+  <button class="upi-button" onclick="pay('149', '6ft-f-method.pdf')">Buy Now</button>
+</div>
 
-  <section class="carousel">
-    <img src="book1.jpg" alt="The 6ft 6 Method">
-    <img src="book2.jpg" alt="The Bamboo Method">
-    <img src="book3.jpg" alt="Gumbi Mode">
-    <img src="book4.jpg" alt="Looksmax Guide">
-  </section>
+<div class="book-card">
+  <img src="bamboo-cover.jpg" alt="Bamboo Method">
+  <div class="book-title">The Bamboo Method</div>
+  <div class="price">₹149</div>
+  <button class="upi-button" onclick="pay('149', 'bamboo-method.pdf')">Buy Now</button>
+</div>
 
-  <section id="ebooks" class="products">
-    <h2>Top-Selling eBooks</h2>
+<div class="book-card">
+  <img src="gumbi-cover.jpg" alt="Gumbi Method">
+  <div class="book-title">The Gumbi Method</div>
+  <div class="price">₹149</div>
+  <button class="upi-button" onclick="pay('149', 'gumbi-method.pdf')">Buy Now</button>
+</div>
 
-    <div class="book">
-      <img src="book1.jpg" alt="6ft 6 Method">
-      <h3>The 6ft 6 Method</h3>
-      <p>Bone Remodeling, Hormonal Hacking & More</p>
-      <p class="price">₹249 <span class="discount">₹149</span></p>
-      <a href="#" class="buy-btn">Buy Now</a>
+<div class="book-card">
+  <img src="titan-cover.jpg" alt="Titan Method">
+  <div class="book-title">The Titan Method</div>
+  <div class="price">₹149</div>
+  <button class="upi-button" onclick="pay('149', 'titan-method.pdf')">Buy Now</button>
+</div>
+
+<div class="book-card">
+  <img src="combo-cover.jpg" alt="Combo Deal">
+  <div class="book-title">All Methods Combo</div>
+  <div class="price">₹499</div>
+  <button class="upi-button" onclick="pay('499', 'combo.zip')">Buy Now</button>
+</div>
+
+  </div>  <div style="text-align: center; margin-top: 30px;">
+    <button id="confirmBtn" class="upi-button confirm-button" onclick="revealDownload()">I have paid</button>
+    <div id="download" class="download-link">
+      <a id="downloadLink" href="#" download>Click here to download your file</a>
     </div>
+  </div>  <script>
+    let selectedFile = "";
 
-    <div class="book">
-      <img src="book2.jpg" alt="The Bamboo Method">
-      <h3>The Bamboo Method</h3>
-      <p>Explained & How to Enhance Your Height</p>
-      <p class="price">₹299 <span class="discount">₹149</span></p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
+    function pay(amount, file) {
+      selectedFile = file;
+      const upiId = "9709131344@axl";
+      const name = "ChadifyMe Books";
+      const url = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR`;
+      window.location.href = url;
 
-    <div class="book">
-      <img src="book4.jpg" alt="Looksmax Guide">
-      <h3>Chadmax</h3>
-      <p>Complete LooksMaxxing Guide (306 Pages)</p>
-      <p class="price">₹399 <span class="discount">₹199</span></p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-  </section>
+      setTimeout(() => {
+        document.getElementById("confirmBtn").style.display = "inline-block";
+      }, 2000);
+    }
+
+    function revealDownload() {
+      document.getElementById("downloadLink").href = selectedFile;
+      document.getElementById("download").style.display = "block";
+    }
+  </script></body>
+</html>
 
   <section class="combo">
     <h2>Combo Offers</h2>
