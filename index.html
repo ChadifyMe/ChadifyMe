@@ -1,4 +1,72 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cannabis Strains</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .hero {
+      background: url('your-book-cover.png') center center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .strain-card {
+      transition: transform 0.3s;
+    }
+    .strain-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1 class="display-4">Discover Premium Cannabis Strains</h1>
+      <p class="lead">Explore our curated selection of top-quality strains.</p>
+      <a href="#strains" class="btn btn-primary btn-lg">Browse Strains</a>
+    </div>
+  </section>
+
+  <!-- Strain Showcase -->
+  <section id="strains" class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Example Strain Card -->
+        <div class="col-md-4 mb-4">
+          <div class="card strain-card">
+            <img src="strain1.jpg" class="card-img-top" alt="Strain Name">
+            <div class="card-body">
+              <h5 class="card-title">Strain Name</h5>
+              <p class="card-text">A brief description of the strain highlighting its effects and characteristics.</p>
+              <a href="#" class="btn btn-outline-secondary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for additional strains -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html><!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>ChadifyMe eBooks</title>
