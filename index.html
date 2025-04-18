@@ -1,24 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lookmaxxing & Height maxxing Book Store</title>
-  <!-- Bootstrap CSS -->
+  <title>ChadifyMe Book Store</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
   <style>
     body {
       font-family: 'Orbitron', sans-serif;
       background-color: #0d0d0d;
-      color: #ffffff;
+      color: #fff;
+      padding-bottom: 100px;
     }
     .hero {
-      background: url('herofilemain.jpg') center center/cover no-repeat;
+      background: url('hero-placeholder.jpg') center center/cover no-repeat;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -28,294 +23,98 @@
     .book-card {
       background-color: #1a1a1a;
       border: none;
+      border-radius: 10px;
+      padding: 15px;
       transition: transform 0.3s;
     }
     .book-card:hover {
       transform: scale(1.05);
     }
-    .author-section {
-      background-color: #1a1a1a;
-      padding: 50px 0;
-    }
-    .author-img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div>
-      <h1 class="display-4">Explore the Universe of Sci-Fi Books</h1>
-      <p class="lead">Dive into worlds beyond imagination.</p>
-      <a href="#books" class="btn btn-primary btn-lg">Browse Books</a>
-    </div>
-  </section>
-
-  <!-- Book Showcase -->
-  <section id="books" class="py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Example Book Card -->
-        <div class="col-md-4 mb-4">
-          <div class="card book-card">
-            <img src="book1.jpg" class="card-img-top" alt="Book Title">
-            <div class="card-body">
-              <h5 class="card-title">Book Title</h5>
-              <p class="card-text">A brief description of the book highlighting its plot and themes.</p>
-              <a href="#" class="btn btn-outline-light">Learn More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Repeat for additional books -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Author Spotlight -->
-  <section class="author-section text-center">
-    <div class="container">
-      <img src="author.jpg" alt="Author Name" class="author-img mb-3">
-      <h2>Author Name</h2>
-      <p class="mb-3">A short biography of the author, detailing their background and works.</p>
-      <a href="#" class="btn btn-outline-light"><i class="fab fa-twitter"></i> Follow on Twitter</a>
-    </div>
-  </section>
-
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cannabis Strains</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <style>
-    body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    .hero {
-      background: url('herofilemain.jpg') center center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    .upi-button {
+      background-color: #4CAF50;
       color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
-    .strain-card {
-      transition: transform 0.3s;
+    .buy-section {
+      text-align: center;
+      padding: 40px 0;
     }
-    .strain-card:hover {
-      transform: scale(1.05);
+    .download-link {
+      display: none;
     }
   </style>
 </head>
-<body>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div>
-      <h1 class="display-4">Discover Premium Cannabis Strains</h1>
-      <p class="lead">Explore our curated selection of top-quality strains.</p>
-      <a href="#strains" class="btn btn-primary btn-lg">Browse Strains</a>
+<body><!-- Hero Section --><section class="hero">
+  <div>
+    <h1 class="display-4">ChadifyMe: Height & Looks Maxxing Library</h1>
+    <p class="lead">Maximize your look. Dominate your presence.</p>
+    <a href="#books" class="btn btn-primary btn-lg">Browse Books</a>
+  </div>
+</section><!-- Book Grid --><section id="books" class="container py-5">
+  <h2 class="text-center mb-4">Premium Methods Collection</h2>
+  <div class="row justify-content-center">
+    <!-- Repeat this block for each book -->
+    <div class="col-md-4 mb-4" >
+      <div class="book-card text-center">
+        <img src="the6ft6method.jpg" alt="The 6ft 6 Method" class="img-fluid rounded mb-2">
+        <h5>The 6ft 6 Method</h5>
+        <p>₹149 / $5</p>
+        <button class="upi-button me-2" onclick="pay('149', '6ft-6-method.pdf', 'INR')">Buy India</button>
+        <button class="upi-button" onclick="pay('5', 'The6ft6Method.pdf', 'USD')">Buy Intl</button>
     </div>
-  </section>
+      
+    <div class="col-md-4 mb-4" >
+      <div class="book-card text-center">
+        <img src="thebamboomethod.jpg" alt="The Bamboo Method" class="img-fluid rounded mb-2">
+        <h5>The 6ft 6 Method</h5>
+        <p>₹149 / $5</p>
+        <button class="upi-button me-2" onclick="pay('149', 'TheBambooMethod.pdf', 'INR')">Buy India</button>
+        <button class="upi-button" onclick="pay('5', '6ft-6-method.pdf', 'USD')">Buy Intl</button>
+      </div> 
 
-  <!-- Strain Showcase -->
-  <section id="strains" class="py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Example Strain Card -->
-        <div class="col-md-4 mb-4">
-          <div class="card strain-card">
-            <img src="herofile.jpg" class="card-img-top" alt="Strain Name">
-            <div class="card-body">
-              <h5 class="card-title">Strain Name</h5>
-              <p class="card-text">A brief description of the strain highlighting its effects and characteristics.</p>
-              <a href="#" class="btn btn-outline-secondary">Learn More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Repeat for additional strains -->
-      </div>
-    </div>
-  </section>
+      <div class="col-md-4 mb-4" >
+      <div class="book-card text-center">
+        <img src="thegumbimethod.jpg" alt="The 6ft 6 Method" class="img-fluid rounded mb-2">
+        <h5>The 6ft 6 Method</h5>
+        <p>₹149 / $5</p>
+        <button class="upi-button me-2" onclick="pay('149', '6ft-6-method.pdf', 'INR')">Buy India</button>
+        <button class="upi-button" onclick="pay('5', '6ft-6-method.pdf', 'USD')">Buy Intl</button>
+      </div> 
+      
+    </div><!-- Add similar blocks for other books -->
+  </div>
+</section><!-- Confirm and Download --><div class="buy-section">
+  <button id="confirmBtn" class="upi-button" style="display:none" onclick="revealDownload()">I have paid</button>
+  <div id="download" class="download-link">
+    <a id="downloadLink" href="#" download class="btn btn-success mt-2">Download File</a>
+  </div>
+</div><!-- Footer --><footer class="text-center mt-5">
+  <p>&copy; 2025 ChadifyMe. All rights reserved.</p>
+</footer><!-- Script --><script>
+  let selectedFile = "";
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html><!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>ChadifyMe eBooks</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
-      padding: 20px;
-    }.book-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.book-card {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  padding: 15px;
-  text-align: center;
-}
-
-.book-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.book-title {
-  font-weight: bold;
-  margin: 12px 0 6px;
-}
-
-.price {
-  color: green;
-  margin-bottom: 12px;
-}
-
-.upi-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.confirm-button {
-  display: none;
-  margin-top: 10px;
-  background-color: #007bff;
-}
-
-.download-link {
-  display: none;
-  margin-top: 10px;
-}
-
-  </style>
-</head>
-<body>  <h2>ChadifyMe Premium Methods</h2>
-  <div class="book-grid"><div class="book-card">
-  <img src="the-6ft-6-cover.jpg" alt="6ft F Method">
-  <div class="book-title">The 6ft F Method</div>
-  <div class="price">₹149</div>
-  <button class="upi-button" onclick="pay('149', '6ft-f-method.pdf')">Buy Now</button>
-</div>
-
-<div class="book-card">
-  <img src="bamboo-cover.jpg" alt="Bamboo Method">
-  <div class="book-title">The Bamboo Method</div>
-  <div class="price">₹149</div>
-  <button class="upi-button" onclick="pay('149', 'bamboo-method.pdf')">Buy Now</button>
-</div>
-
-<div class="book-card">
-  <img src="gumbi-cover.jpg" alt="Gumbi Method">
-  <div class="book-title">The Gumbi Method</div>
-  <div class="price">₹149</div>
-  <button class="upi-button" onclick="pay('149', 'gumbi-method.pdf')">Buy Now</button>
-</div>
-
-<div class="book-card">
-  <img src="titan-cover.jpg" alt="Titan Method">
-  <div class="book-title">The Titan Method</div>
-  <div class="price">₹149</div>
-  <button class="upi-button" onclick="pay('149', 'titan-method.pdf')">Buy Now</button>
-</div>
-
-<div class="book-card">
-  <img src="combo-cover.jpg" alt="Combo Deal">
-  <div class="book-title">All Methods Combo</div>
-  <div class="price">₹499</div>
-  <button class="upi-button" onclick="pay('499', 'combo.zip')">Buy Now</button>
-</div>
-
-  </div>  <div style="text-align: center; margin-top: 30px;">
-    <button id="confirmBtn" class="upi-button confirm-button" onclick="revealDownload()">I have paid</button>
-    <div id="download" class="download-link">
-      <a id="downloadLink" href="#" download>Click here to download your file</a>
-    </div>
-  </div>  <script>
-    let selectedFile = "";
-
-    function pay(amount, file) {
-      selectedFile = file;
+  function pay(amount, file, currency) {
+    selectedFile = file;
+    let url = "";
+    if (currency === "INR") {
       const upiId = "9709131344@axl";
       const name = "ChadifyMe Books";
-      const url = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR`;
-      window.location.href = url;
-
-      setTimeout(() => {
-        document.getElementById("confirmBtn").style.display = "inline-block";
-      }, 2000);
+      url = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR`;
+    } else {
+      url = "https://razorpay.me/@chadifyme" + amount; // Placeholder for international gateway
     }
+    window.open(url, '_blank');
+    setTimeout(() => {
+      document.getElementById("confirmBtn").style.display = "inline-block";
+    }, 2000);
+  }
 
-    function revealDownload() {
-      document.getElementById("downloadLink").href = selectedFile;
-      document.getElementById("download").style.display = "block";
-    }
-  </script></body>
+  function revealDownload() {
+    document.getElementById("downloadLink").href = selectedFile;
+    document.getElementById("download").style.display = "block";
+  }
+</script></body>
 </html>
-
-  <section class="combo">
-    <h2>Combo Offers</h2>
-    <p>Any 2 books: ₹249 | Any 6 books: ₹499 | Any 12 books: ₹899</p>
-    <a href="#" class="combo-btn">Get Combo Deal</a>
-  </section>
-
-  <section class="reviews">
-    <h2>What Customers Say</h2>
-    <p>⭐⭐⭐⭐⭐ "I gained 2 inches after 18. These books changed my life!"</p>
-    <p>⭐⭐⭐⭐⭐ "The LooksMaxxing guide is gold — so detailed and actionable."</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 ChadifyMe. All rights reserved.</p>
-  </footer>
-</body>
-</html>
-<section class="bg-white py-20 px-6">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
-    
-    <!-- Text Content -->
-    <div class="md:w-1/2 text-center md:text-left">
-      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Unlock Your Maximum Potential</h1>
-      <p class="text-lg md:text-2xl text-gray-600 mb-8">Transform your posture, boost confidence, and look taller with ChadifyMe.</p>
-      <div class="flex justify-center md:justify-start space-x-4">
-        <a href="#get-started" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-700 transition">Get Started</a>
-        <a href="#learn-more" class="border border-blue-600 text-blue-600 font-semibold py-3 px-6 rounded-full hover:bg-blue-50 transition">Learn More</a>
-      </div>
-    </div>
-
-    <!-- Hero Image -->
-    <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-      <img src="your-book-cover.png" alt="ChadifyMe Book Cover" class="w-80 h-auto drop-shadow-xl rounded-lg">
-    </div>
-
-  </div>
-</section>
