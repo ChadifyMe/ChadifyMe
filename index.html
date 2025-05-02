@@ -1,120 +1,115 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ChadifyMe Book Store</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <title>ChadifyMe E-book</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Orbitron', sans-serif;
-      background-color: #0d0d0d;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #1a1a1a, #000);
       color: #fff;
-      padding-bottom: 100px;
-    }
-    .hero {
-      background: url('herohost.png') center center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
+      padding: 0 20px;
     }
-    .book-card {
-      background-color: #1a1a1a;
-      border: none;
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .ebook-cover {
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto;
       border-radius: 10px;
-      padding: 15px;
-      transition: transform 0.3s;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     }
-    .book-card:hover {
-      transform: scale(1.05);
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ff4757;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
-    .upi-button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+
+    .cta-button:hover {
+      background-color: #e84118;
     }
-    .buy-section {
-      text-align: center;
-      padding: 40px 0;
+
+    .social-icons {
+      margin-top: 40px;
     }
-    .download-link {
-      display: none;
+
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .cta-button {
+        padding: 12px 24px;
+      }
     }
   </style>
 </head>
-<body><!-- Hero Section --><section class="hero">
-  <div>
-    <h1 class="display-4">ChadifyMe: Height & Looks Maxxing Library</h1>
-    <p class="lead">Maximize your look. Dominate your presence.</p>
-    <a href="#books" class="btn btn-primary btn-lg">Browse Books</a>
-  </div>
-</section><!-- Book Grid --><section id="books" class="container py-5">
-  <h2 class="text-center mb-4">Premium Methods Collection</h2>
-  <div class="row justify-content-center">
-    <!-- Repeat this block for each book -->
-    <div class="col-md-4 mb-4" >
-      <div class="book-card text-center">
-        <img src="the6ft6method.jpg" alt="The 6ft 6 Method" class="img-fluid rounded mb-2">
-        <h5>The 6ft 6 Method</h5>
-        <p>₹149 / $5</p>
-        <button class="upi-button me-2" onclick="pay('149', '6ft-6-method.pdf', 'INR')">Buy India</button>
-        <button class="upi-button" onclick="pay('5', 'The6ft6Method.pdf', 'USD')">Buy Intl</button>
+<body>
+  <div class="container">
+    <h1>ChadifyMe: Unlock Your Ultimate Potential</h1>
+    <p>Discover the secrets to transforming your life with our comprehensive eBook. Dive into proven strategies and actionable insights that will elevate every aspect of your personal and professional journey.</p>
+    <img src="herohost.png" alt="ChadifyMe E-book Cover" class="ebook-cover" />
+    <br/>
+    <a href="chadifyme@ibl" class="cta-button">Download Now</a>
+
+    <div class="social-icons">
+      <a href="https://twitter.com/yourprofile" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+      </a>
+      <a href="https://instagram.com/yourprofile" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+      </a>
+      <a href="https://facebook.com/yourprofile" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+      </a>
     </div>
-      
-    <div class="col-md-4 mb-4" >
-      <div class="book-card text-center">
-        <img src="thebamboomethod.jpg" alt="The Bamboo Method" class="img-fluid rounded mb-2">
-        <h5>The 6ft 6 Method</h5>
-        <p>₹149 / $5</p>
-        <button class="upi-button me-2" onclick="pay('149', 'TheBambooMethod.pdf', 'INR')">Buy India</button>
-        <button class="upi-button" onclick="pay('5', '6ft-6-method.pdf', 'USD')">Buy Intl</button>
-      </div> 
-
-      <div class="col-md-4 mb-4" >
-      <div class="book-card text-center">
-        <img src="thegumbimethod.jpg" alt="The 6ft 6 Method" class="img-fluid rounded mb-2">
-        <h5>The 6ft 6 Method</h5>
-        <p>₹149 / $5</p>
-        <button class="upi-button me-2" onclick="pay('149', '6ft-6-method.pdf', 'INR')">Buy India</button>
-        <button class="upi-button" onclick="pay('5', '6ft-6-method.pdf', 'USD')">Buy Intl</button>
-      </div> 
-      
-    </div><!-- Add similar blocks for other books -->
   </div>
-</section><!-- Confirm and Download --><div class="buy-section">
-  <button id="confirmBtn" class="upi-button" style="display:none" onclick="revealDownload()">I have paid</button>
-  <div id="download" class="download-link">
-    <a id="downloadLink" href="#" download class="btn btn-success mt-2">Download File</a>
-  </div>
-</div><!-- Footer --><footer class="text-center mt-5">
-  <p>&copy; 2025 ChadifyMe. All rights reserved.</p>
-</footer><!-- Script --><script>
-  let selectedFile = "";
-
-  function pay(amount, file, currency) {
-    selectedFile = file;
-    let url = "";
-    if (currency === "INR") {
-      const upiId = "9709131344@axl";
-      const name = "ChadifyMe Books";
-      url = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR`;
-    } else {
-      url = "https://razorpay.me/@chadifyme" + amount; // Placeholder for international gateway
-    }
-    window.open(url, '_blank');
-    setTimeout(() => {
-      document.getElementById("confirmBtn").style.display = "inline-block";
-    }, 2000);
-  }
-
-  function revealDownload() {
-    document.getElementById("downloadLink").href = selectedFile;
-    document.getElementById("download").style.display = "block";
-  }
-</script></body>
+</body>
 </html>
